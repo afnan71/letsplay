@@ -10,15 +10,15 @@ import Profile from './pages/Profile.js';
 import AdminDashboard from './pages/AdminDashboard.js';
 import Notifications from './pages/Notifications.js';
 import Settings from './pages/Settings.js';
-import LoginSignup from './components/LoginSignup/LoginSignup.js';
-
+import LoginSignup from './pages/LoginSignup.js';
+import './index.css';
 const App = () => {
   return (
     <Router>
       <div className="app">
         <NavigationBar />
         <Routes>
-          <Route path="/login-signup" element={<LoginSignup />} /> 
+          <Route path="/loginSignup" element={<LoginSignup />} /> 
           <Route path="/" exact element={<Home />} />
           <Route path="/teams" element={<Teams />} />
           <Route path="/challenges" element={<Challenges />} />

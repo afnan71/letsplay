@@ -1,0 +1,51 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.homecont_main {
+  width: 30%;
+  box-shadow: 0px 0px 15px 0px rgba(148, 148, 148, 1);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(148, 148, 148, 1);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(148, 148, 148, 1);
+  margin: 1.3rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #6dbd9e, #ffffff); /* Same gradient as before */
+}
+
+.homecont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #6dbd9e, #ffffff); /* Same gradient as before */
+}
+
+.homecont h3 {
+  font-weight: bold; /* Make heading bold */
+  font-family: 'Montserrat', sans-serif; /* Set heading font */
+}
+
+.homecont button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #285846; /* Change button color as needed */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold; /* Make button bold */
+  font-family: 'Montserrat', sans-serif; /* Set button font */
+}
+
+.homecont button:hover {
+  background-color: #eaeaea;
+  color: black;
+}
+
+.homecont p {
+  text-align: left;
+  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif; /* Set paragraph font */
+}

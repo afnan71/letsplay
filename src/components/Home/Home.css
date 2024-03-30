@@ -1,0 +1,67 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.background-image {
+  /* Set background size and other properties */
+  background: linear-gradient(135deg, #6dbd9e, #ffffff); /* Adjust gradient colors as needed */
+  background-size: cover;
+  background-position: center;
+  height: 70vh; /* Adjust height as needed */
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.heading {
+  font-size: 3rem;
+  color: #000;
+  margin-bottom: 7px; /* Decrease space between heading and slogan */
+  font-family: 'Montserrat', sans-serif; /* Set heading font */
+}
+
+.slogan {
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 5px; /* Decrease space between slogan and paragraph */
+  font-family: 'Montserrat', sans-serif; /* Set slogan font */
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #285846; /* Change button color as needed */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif; /* Set button font */
+}
+
+.button:hover {
+  background-color: #eaeaea;
+  color: #000; /* Change hover color as needed */
+}
+
+.content p {
+  color: #000;
+  margin-top: 10px; /* Increase space between slogan and paragraph */
+}
+
+.homcont {
+  display: flex;
+}
