@@ -1,0 +1,109 @@
+/* Base styles for footer items */
+.item1,
+.item2,
+.item3,
+.item4,
+.item5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+}
+
+/* Footer container styles */
+.footer-container {
+  color: aliceblue;
+  text-align: center;
+  background-color: #1f5156;
+  font-size: 15px;
+  width: 100%;
+  height: 4rem;
+  display: grid;
+  grid-template-columns: 3fr 6fr 1fr 1fr 1fr;
+}
+
+/* Item hover effects */
+.item1:hover,
+.item3:hover,
+.item4:hover,
+.item5:hover {
+  background-color: #000000;
+  transition: 0.4s;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  .item1 {
+    font-size: 12px;
+    padding-left: 3px;
+  }
+  .item2 {
+    font-size: 9px;
+  }
+  .item3,
+  .item4,
+  .item5 {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .item1 {
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  .item2 {
+    font-size: 9px;
+  }
+  .item3,
+  .item4,
+  .item5 {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .item1 {
+    font-size: 16px;
+    padding-left: 6px;
+  }
+  .item2 {
+    font-size: 11px;
+  }
+  .item3,
+  .item4,
+  .item5 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .item1 {
+    font-size: 18px;
+    padding-left: 8px;
+  }
+  .item2 {
+    font-size: 13px;
+  }
+  .item3,
+  .item4,
+  .item5 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .item1 {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  .item2 {
+    font-size: 15px;
+  }
+  .item3,
+  .item4,
+  .item5 {
+    font-size: 20px;
+  }
+}

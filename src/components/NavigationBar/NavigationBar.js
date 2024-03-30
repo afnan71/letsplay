@@ -1,27 +1,92 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
-import letsplay from '../Assets/letsplay.png'
-import './NavigationBar.css'; // Import CSS styles
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./NavigationBar.css";
+import { HamburgetMenuClose, HamburgetMenuOpen } from "./Icons.js";
 
-const NavigationBar = () => {
+function NavBar() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+
   return (
     <nav className="navbar">
-      <div className="brand">
-        <img src={letsplay} alt="App Logo" className="logo" />
-        
-      </div>
-      <ul className="nav-items">
-        <li><Link to='/login-signup'>Signup</Link></li>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/teams'>Signup</Link></li>
-        <li><Link to='/challenges'>Signup</Link></li>
-        <li><Link to='/login-signup'>Signup</Link></li>
-        
+      <div className="nav-container">
+        <NavLink exact to="/" className="nav-logo" onClick={handleClick}>
+          <span>Lets Play</span>
+        </NavLink>
 
-      </ul>
-    
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <NavLink
+              exact
+              to="/"
+              activeClassName="active"
+              className="nav-links"
+              onClick={handleClick}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              exact
+              to="/about"
+              activeClassName="active"
+              className="nav-links"
+              onClick={handleClick}
+            >
+              Facilities
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              exact
+              to="/blog"
+              activeClassName="active"
+              className="nav-links"
+              onClick={handleClick}
+            >
+              Teams
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              exact
+              to="/contact"
+              activeClassName="active"
+              className="nav-links"
+              onClick={handleClick}
+            >
+              Challenges
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              exact
+              to="/LoginSignup"
+              activeClassName="active"
+              className="nav-links"
+              onClick={handleClick}
+            >
+              Signin/SignUp
+            </NavLink>
+          </li>
+        </ul>
+
+        <div className="nav-icon" onClick={handleClick}>
+          {click ? (
+            <span className="icon">
+              <HamburgetMenuOpen />
+            </span>
+          ) : (
+            <span className="icon">
+              <HamburgetMenuClose />
+            </span>
+          )}
+        </div>
+      </div>
     </nav>
   );
 }
 
-export default NavigationBar;
+export default NavBar;
